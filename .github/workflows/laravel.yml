@@ -26,3 +26,21 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
+
+  deploy:
+    needs: [laravel-tests]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: 'SSH to Deplot Server'
+       uses: appleyboy/ssh-action@master
+       with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/nomads
+            ls -lah
+
