@@ -40,7 +40,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-          script: |
-            cd /var/www/nomads
-            ls -lah
+        script: |
+          cd /var/www/nomads
+          ls -lah
 
