@@ -33,14 +33,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: 'SSH to Deplot Server'
-       uses: appleyboy/ssh-action@master
-       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-          script: |
-            cd /var/www/nomads
-            ls -lah
+    - name: 'SSH to Deplot Server'
+      uses: appleyboy/ssh-action@master
+      with:
+      host: ${{ secrets.HOST }}
+      username: ${{ secrets.USERNAME }}
+      password: ${{ secrets.PASSWORD }}
+      port: ${{ secrets.PORT }}
+        script: |
+          cd /var/www/nomads
+          ls -lah
 
