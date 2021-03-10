@@ -30,11 +30,11 @@ NOMADS
         <p>Members</p>
       </div>
       <div class="col-3 col-md-2 stats-detail">
-        <h2>20</h2>
+        <h2>205</h2>
         <p>Countries</p>
       </div>
       <div class="col-3 col-md-2 stats-detail">
-        <h2>20K</h2>
+        <h2>201</h2>
         <p>Hotel</p>
       </div>
       <div class="col-3 col-md-2 stats-detail">
